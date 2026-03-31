@@ -1,1 +1,213 @@
-Привет!
+%_-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english, russian]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+
+%-----------CUSTOM-COMMANDS-----------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingExperience}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+%----------ЗАГОЛОВОК----------
+\begin{center}
+    \textbf{\Huge \scshape Фамилия Имя} \\ \vspace{1pt}
+    \small телефон $|$ \href{mailto:x@x.com}{\underline{почта}} $|$ 
+    \href{https://t.me/}{\underline{телеграмм через @}} $|$
+    \href{https://github.com/}{\underline{github.com/<your nickname>}} \\ \vspace{2pt}
+    \largeСпециалист по Информационной Безопасности
+\end{center}
+
+
+%----------О-СЕБЕ----------
+\section{О Себе}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     Студент с 4+ годами опыта программирования на Python и 2-летним опытом работы с Arch Linux и C++. Участвовал в CTF-соревнованиях, финалист олимпиады Газпром, МОШ (аэрокосмос) и призёр Национальной Технологической Олимпиады по Информационной Безопасности. Разрабатывал проекты, включая телеграм-ботов и инструмент для модификации оперативной памяти приложений с использованием DLL-инъекций. Интересуюсь низкоуровневым программированием, работой процессоров и операционных систем. Стремлюсь развиваться в сфере информационной безопасности, применяя свои знания в программировании и математике.  
+    }} 
+ \end{itemize}
+
+
+%-----------ОБРАЗОВАНИЕ-----------
+\section{Образование}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Центральный Университет}{Москва}
+      {Математика и компьютерные науки, трек Разработка}{2024 - 2028}
+    \resumeItemListStart
+      \resumeItem{Релевантные курсы: C++, Линейная алгебра, Дискретная математика, Основы промышленного программирования (Java, Go)}
+      \resumeItem{Стипендия, покрывающая 50\% стоимости обучения}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------ПРОЕКТЫ-----------
+\section{Проекты}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Чит для игры Control} $|$ \emph{C++, анализ и модификация оперативной памяти, DLL-инъекция}}{Апрель 2023}
+          \resumeItemListStart
+            \resumeItem{Провел анализ памяти игры и выявил основные оффсеты}
+            \resumeItem{Использовал Cheat Engine - отладчик и инструмент для reverse engineering}
+            \resumeItem{Использовал DLL-инъекцию для интеграции программы в процесс игры}
+            \resumeItem{Углубил понимание работы оперативной памяти, низкоуровнего программирования и процессов в Windows}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Телеграм-бот для рекомендаций фильмов} $|$ \emph{aiogram3, KinopoiskAPI, SQLAlchemy}}{Июль 2023 - сейчас}
+          \resumeItemListStart
+            \resumeItem{Разработал телеграм-бота для рекомендаций фильмов для антикинотеатра Kinoroom}
+            \resumeItem{Использовал KinopoiskAPI для получения актуальной информации по фильмам}
+            \resumeItem{Реализовал фильтрации и категоризацию фильмов по разным параметрам}
+            \resumeItem{Использовал SQLAlchemy вместе с SQLite, а позже с PostgreSQL}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Судоку} $|$ \emph{Python, PyQt5, Git, алгоритмы}}{Ноябрь 2023}
+          \resumeItemListStart
+            \resumeItem{Разработал игру Судоку с использованием PyQt5 для создания графического интерфейса.}
+            \resumeItem{Реализовал алгоритм генерации уникальных игровых полей с различными уровнями сложности}
+            \resumeItem{Добавил функционал для очистки поля, подсказок и системы подсчёта опыта}
+            \resumeItem{Использовал Git для структурированной и безопасной разработки}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------ОПЫТ-----------
+\section{Достижения}
+  \resumeSubHeadingListStart
+    \resumeSubheadingExperience
+      {Национальная Технологическая Олимпиада по Информационной Безопасности}{2024}
+      \resumeItemListStart
+        \resumeItem{Расследовал инцидент произошедший в компании, исследовал Windows образ на предмет следов злоумышленника}
+        \resumeItem{Нашел ключ шифрования данных с помощью которого были зашифрованы данные на образе}
+        \resumeItem{Написал отчет о решенных Jeopardy-based заданиях и расследовании инцидента}
+      \resumeItemListEnd
+    
+    \resumeSubheadingExperience
+      {Московская Олимпиада Школьников по аэрокосмосу}{2024}
+    \resumeItemListStart
+      \resumeItem{Написал программу для передачи и шифрования данных для разных модулей и частот}
+      \resumeItem{Собрал модель спутника и наземной станции на основе Arduino}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------НАВЫКИ-----------
+\section{Технические навыки}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Языки программирования}{: Python (продвинутый), C/C++ (средний), SQL (SQLite, PostgreSQL) (средний), JavaScript (начальный), HTML/CSS (начальный), Java (начальный), Go (начальный), bash} \\
+     \textbf{Фреймворки}{: Flask, aiogram3} \\
+     \textbf{Инструменты}{: Git, Docker, VS Code, PyCharm, CLion} \\
+     \textbf{Инструменты}{: nmap, wireshark, volatility, ssh, burpsuite} \\
+     \textbf{Библиотеки}{: pandas, NumPy, Matplotlib, requests, BeautifulSoup4, PyQt5} \\ 
+     \textbf{Языки}{: Русский (родной), Английский (B2), Японский (начальный)}
+    }} \\
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
